@@ -1,8 +1,56 @@
+@import "utilities";
+@import "config";
+@import "btnConfig";
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.hero{
+  @include set-bg($primary-color);
+  height: 600px;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+    }
+
+    li {
+      padding: 15px;
+    }
+
+    a {
+      color: text-color-picker($primary-color);
+      font-family: $font-stack;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    img {
+      width: 50%;
+    }
+
+    h1 {
+      font-size: 50px;
+      line-height: 1.2;
+    }
+  }
 }
 
 body {
